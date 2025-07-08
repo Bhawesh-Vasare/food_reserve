@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     when 'driver'
       driver_dashboard_path
     else
-      user_dashboard_path
+      user_dashboard_index_path
     end
   end
 
