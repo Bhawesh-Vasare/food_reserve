@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <div class="row">
+    <% @foods.each do |food| %>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><%= food.name %></h5>
+            <p class="card-text"><%= truncate(food.description, length: 100) %></p>
+            <h6 class="text-success">$<%= food.price %></h6>
+          </div>
+          <div class="card-footer text-center">
+            <%= link_to 'View Details', foods_path(food), class: 'btn btn-primary btn-sm' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
